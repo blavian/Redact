@@ -1,13 +1,11 @@
 import re
-import sys
 
-filename= sys.argv[1]
-output = sys.argv[2]
 
-def main():
-    with open(filename, 'r') as infile:
-        lines = infile.readlines()
-    with open(output, 'w') as outfile:
+filename = "/Users/beny.lavian/Desktop/supervisord.txt"
+output = "/Users/beny.lavian/Desktop/working.txt"
+
+with open(filename, 'r') as infile:
+    lines = infile.readlines()
+with open(output, 'w') as outfile:
         for line in lines:
-            re.sub()
             outfile.write(line)
