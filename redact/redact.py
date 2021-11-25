@@ -8,4 +8,7 @@ with open(filename, 'r') as infile:
     lines = infile.readlines()
 with open(output, 'w') as outfile:
         for line in lines:
-            outfile.write(line)
+            new_line = re.sub(
+                r'1\d{10}',"redacted", "line"
+            )
+            outfile.write(new_line)
