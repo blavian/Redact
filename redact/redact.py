@@ -6,9 +6,16 @@ output = "/Users/beny.lavian/Desktop/working.txt"
 
 with open(filename, 'r') as infile:
     lines = infile.readlines()
+    pattern = re.compile(r'1\d{10}')
+    print(pattern)
+
 with open(output, 'w') as outfile:
         for line in lines:
-            new_line = re.sub(
-                r'1\d{10}',"redacted", "line"
-            )
-            outfile.write(new_line)
+            match = re.match(pattern,line)
+            if match:
+                newline = re.sub(pattern, "redacted", line)
+            else:
+                outfile.write(line)
+
+
+                
