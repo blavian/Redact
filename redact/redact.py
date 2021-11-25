@@ -9,7 +9,7 @@ with open(filename, 'r') as infile:
 
 with open(output, 'w') as outfile:
         for line in lines:
-                newline = re.sub(r"1\d{10}", "redacted", line)
+                newline = re.sub(r'1\d{10}', "redacted", line)
                 outfile.write(newline)
 
 
