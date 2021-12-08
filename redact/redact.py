@@ -1,7 +1,8 @@
 import re
+import sys
 
 
-filename = "file1.txt"
+filename = sys.argv[1]
 output = "file1_redacted.txt"
 
 with open(filename, 'r') as infile:
