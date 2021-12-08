@@ -3,7 +3,8 @@ import sys
 
 
 filename = sys.argv[1]
-output = "file1_redacted.txt"
+output =  filename.split(".txt")[0] + "_redacted.txt"
+
 
 with open(filename, 'r') as infile:
     lines = infile.readlines()
