@@ -1,8 +1,8 @@
 import re
 
 
-filename = "/Users/beny.lavian/Desktop/supervisord.txt"
-output = "/Users/beny.lavian/Desktop/test_redacted.txt"
+filename = "file1.txt"
+output = "file1_redacted.txt"
 
 with open(filename, 'r') as infile:
     lines = infile.readlines()
